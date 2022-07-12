@@ -1,29 +1,30 @@
-const mario = document.querySelector('.mario')
+const tata = document.querySelector('.tata')
 const pipe = document.querySelector('.pipe')
 
 const jump = () => {
-    mario.classList.add('jump')
+    tata.classList.add('jump')
 
     setTimeout(() => {
-        mario.classList.remove('jump')
+        tata.classList.remove('jump')
     }, 500)
 }
 
 const loop = setInterval(() => {
 
     const pipePosition = pipe.offsetLeft
-    const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '') //o + muda string pra num
+    const tataPosition = +window.getComputedStyle(tata).bottom.replace('px', '') //o + muda string pra num
 
-    if (pipePosition <= 120 && pipePosition > 0 && marioPosition < 80) {
+    if (pipePosition <= 120 && pipePosition > 0 && tataPosition < 80) {
         pipe.style.animation = 'none'
         pipe.style.left = `${pipePosition}px`
 
-        mario.style.animation = 'none'
-        mario.style.bottom = `${marioPosition}px`
+        tata.style.animation = 'none'
+        tata.style.bottom = `${tataPosition}px`
 
-        mario.src = './images/game-over.png'
-        mario.style.width = '100px' //75px
-        mario.style.marginLeft = '50px'
+        tata.src = './images/game-over.png'
+        tata.style.width = '100px' //75px
+        tata.style.bottom = '5px'
+        tata.style.marginLeft = '50px'
 
         clearInterval(loop)
     }

@@ -1,6 +1,5 @@
 * {
     margin: 0;
-    
     padding: 0;
     box-sizing: border-box;
 }
@@ -22,9 +21,9 @@
     animation: pipe-animation 1.5s infinite linear;
 }
 
-.mario {
+.tata {
     position: absolute;
-    bottom: 0;
+    bottom: -28px;
     width: 150px;
 }
 
